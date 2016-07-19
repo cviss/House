@@ -24,8 +24,9 @@ class House: NSObject, NSCoding {
     }
     
     required init?(coder: NSCoder) {
-        let data = coder.decodeObject(forKey: "image") as! Data
-        image = UIImage(data: data) ?? UIImage(named: "defaultHouse")!
+        if let data = coder.decodeObject(forKey: "image") as? Data {
+            image = UIImage(data: data) ?? UIImage(named: "defaultHouse")!
+        }
         address = (coder.decodeObject(forKey: "address") as? String) ?? ""
         residents = (coder.decodeObject(forKey: "residents") as? [Resident]) ?? []
         expenses = (coder.decodeObject(forKey: "expenses") as? [Expense]) ?? []
