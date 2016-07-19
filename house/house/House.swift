@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import UIKit
+
+class House {
+    var image: UIImage
+    var address: String
+//    var accountInfo: Info
+    var residents: [Resident]
+    var expenses: [Expense]
+    
+    init(image: UIImage, address: String, residents: [Resident], expenses: [Expense]) {
+        self.image = image
+        self.address = address
+        self.residents = residents
+        self.expenses = expenses
+    }
+    
+    
+}
