@@ -15,23 +15,14 @@ class HouseController {
     
     //All Save Function Posiibilities\\
     
-    func save(residents: [Resident]) {
-        
-    }
-    
-    func save(expenses: [Expense]) {
-        
-    }
-    
-    func save(image: UIImage) {
-        
-    }
-    
-    func save(address: String) {
-        
-    }
-    
-    func save(residents: [Resident], expenses: [Expense], image: UIImage, address: String) {
-        
+    func loadHouse() -> House {
+        do {
+            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
+            let fileUrl = try documents.appendingPathComponent("house")
+            let house = try String(contentsOf: fileUrl) as! House
+            return house
+        } catch {
+            print("failed to load")
+        }
     }
 }

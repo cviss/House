@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class House: NSCoding {
+class House: NSObject, NSCoding {
     var image: UIImage?
     var address: String?
 //    var accountInfo: Info
@@ -17,24 +17,26 @@ class House: NSCoding {
     var expenses: [Expense]?
     
     init(image: UIImage?, address: String?, residents: [Resident]?, expenses: [Expense]?) {
-        self.image = image
+        self.image = UIImage()
         self.address = address
         self.residents = residents
         self.expenses = expenses
     }
     
     required init?(coder: NSCoder) {
-        image = (coder.decodeObject(forKey: "image") as? UIImage) ?? UIImage(named: "defaultHouse")!
+        let data = coder.decodeObject(forKey: "image") as! Data
+        image = UIImage(data: data) ?? UIImage(named: "defaultHouse")!
         address = (coder.decodeObject(forKey: "address") as? String) ?? ""
         residents = (coder.decodeObject(forKey: "residents") as? [Resident]) ?? []
         expenses = (coder.decodeObject(forKey: "expenses") as? [Expense]) ?? []
     }
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(image, forKey: "image")
-        aCoder.encode(address, forKey: "address")
-        aCoder.encode(residents, forKey: "residents")
-        aCoder.encode(expenses, forKey: "expenses")
+    func encode(with coder: NSCoder) {
+        let data = UIImagePNGRepresentation(image!)
+        coder.encode(data, forKey: "image")
+        coder.encode(address, forKey: "address")
+        coder.encode(residents, forKey: "residents")
+        coder.encode(expenses, forKey: "expenses")
     }
     
     

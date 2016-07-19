@@ -15,25 +15,36 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         do {
             let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
-            let fileUrl = try documents.appendingPathComponent("address")
+            let fileUrl = try documents.appendingPathComponent("house")
             textField.text = try String(contentsOf: fileUrl)
         } catch {
             print("failed to load")
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     @IBAction func saveAddressPressed(_ sender: AnyObject) {
         let house = House(image: nil, address: textField.text, residents: nil, expenses: nil)
         do {
             let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
-            let fileUrl = try documents.appendingPathComponent("address")
+            let fileUrl = try documents.appendingPathComponent("house")
             NSKeyedArchiver.archiveRootObject(house, toFile: fileUrl.path!)
         } catch {
             print("failed to save")
         }
+        
     }
 
 }
