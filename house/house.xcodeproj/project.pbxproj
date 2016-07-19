@@ -21,7 +21,7 @@
 		A84422961D3C1FA5005FE8B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84422941D3C1FA5005FE8B0 /* LaunchScreen.storyboard */; };
 		A84422A11D3C1FA5005FE8B0 /* houseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84422A01D3C1FA5005FE8B0 /* houseTests.swift */; };
 		A84422AC1D3C1FA5005FE8B0 /* houseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84422AB1D3C1FA5005FE8B0 /* houseUITests.swift */; };
-		A8A9B45E1D3E54E40016B7BF /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A9B45D1D3E54E40016B7BF /* MainView.storyboard */; };
+		A8A9B45E1D3E54E40016B7BF /* Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A9B45D1D3E54E40016B7BF /* Management.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,7 @@
 		A84422A71D3C1FA5005FE8B0 /* houseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = houseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84422AB1D3C1FA5005FE8B0 /* houseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = houseUITests.swift; sourceTree = "<group>"; };
 		A84422AD1D3C1FA5005FE8B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8A9B45D1D3E54E40016B7BF /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		A8A9B45D1D3E54E40016B7BF /* Management.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Management.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +161,7 @@
 				A84422971D3C1FA5005FE8B0 /* Info.plist */,
 				A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */,
 				A81D57E51D3E47980064FC4A /* Storyboard.storyboard */,
-				A8A9B45D1D3E54E40016B7BF /* MainView.storyboard */,
+				A8A9B45D1D3E54E40016B7BF /* Management.storyboard */,
 				A81D57D21D3E1D070064FC4A /* Dont click on this */,
 				A81D57D81D3E1E810064FC4A /* Views */,
 				A81D57D71D3E1E700064FC4A /* View Controllers */,
@@ -298,7 +298,7 @@
 			files = (
 				A84422961D3C1FA5005FE8B0 /* LaunchScreen.storyboard in Resources */,
 				A84422931D3C1FA5005FE8B0 /* Assets.xcassets in Resources */,
-				A8A9B45E1D3E54E40016B7BF /* MainView.storyboard in Resources */,
+				A8A9B45E1D3E54E40016B7BF /* Management.storyboard in Resources */,
 				A81D57E61D3E47980064FC4A /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
