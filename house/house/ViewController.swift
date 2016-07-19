@@ -11,38 +11,45 @@ import UIKit
 class ViewController: UIViewController {
     let manager = FileManager.default()
     
-    @IBOutlet weak var textField: UITextField!
+
+    
+    @IBOutlet weak var addressField: UITextField!
+    @IBOutlet weak var residentField: UITextField!
+    
+    
     var house: House! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
-            let fileURL = try documents.appendingPathComponent("house")
-            guard let house = NSKeyedUnarchiver.unarchiveObject(withFile: fileURL.path!) as? House else {
-                print("No House Loaded")
-                return
-            }
-            self.house = house
-        }
-        catch {
-            print("failed to load")
-        }
-        
-        textField.text = house.address
+        HouseController.sharedInstance.restoreHouse()
+        addressField.text = HouseController.sharedInstance.house.address
     }
 
     @IBAction func saveAddressPressed(_ sender: AnyObject) {
-        let house = House(image: nil, address: textField.text, residents: nil, expenses: nil)
-        do {
-            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
-            let fileUrl = try documents.appendingPathComponent("house")
-            NSKeyedArchiver.archiveRootObject(house, toFile: fileUrl.path!)
-        } catch {
-            print("failed to save")
-        }
-        
+        HouseController.sharedInstance.house.address = addressField.text!
+        HouseController.sharedInstance.saveHouse()
     }
+    
+    var l = 0
+    @IBAction func saveResidentPressed(_ sender: AnyObject) {
+        HouseController.sharedInstance.house.residents.append(Resident(name: residentField.text!, expenses: [:]))
+        HouseController.sharedInstance.saveHouse()
+        l += 1
+    }
+
+    var i = 0
+    @IBAction func loadResidentPressed(_ sender: AnyObject) {
+        residentField.text = HouseController.sharedInstance.house.residents[i].name
+        i += 1
+    }
+
+   
+    
+    
+    
+    
+    
+    
 
 }
 

@@ -32,15 +32,13 @@
                                     <action selector="saveAddressPressed:" destination="ByX-fE-Wb7" eventType="touchUpInside" id="JWw-Ta-rTU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWu-to-XeT">
-                                <frame key="frameInset" minX="124" minY="188" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save Resident"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FX-sm-7uh">
-                                <frame key="frameInset" minX="124" minY="231" width="125" height="30"/>
+                                <frame key="frameInset" minX="125" minY="226" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Load Resident"/>
+                                <connections>
+                                    <action selector="loadResidentPressed:" destination="ByX-fE-Wb7" eventType="touchUpInside" id="scY-uu-6U6"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCn-1u-z8B">
                                 <frame key="frameInset" minX="139" minY="136" width="97" height="30"/>
@@ -48,11 +46,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWu-to-XeT">
+                                <frame key="frameInset" minX="125" minY="188" width="125" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save Resident"/>
+                                <connections>
+                                    <action selector="saveResidentPressed:" destination="ByX-fE-Wb7" eventType="touchUpInside" id="47i-eH-JxI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="y7B-Gc-4Tw" id="GLo-8o-iLo"/>
+                        <outlet property="addressField" destination="y7B-Gc-4Tw" id="IR5-Rs-lpR"/>
+                        <outlet property="residentField" destination="lCn-1u-z8B" id="ZyN-Mn-12w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6of-LV-1z8" userLabel="First Responder" sceneMemberID="firstResponder"/>

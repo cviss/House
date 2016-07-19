@@ -23,7 +23,7 @@ enum Month: String {
     case December = "December"
 }
 
-class ResidentExpense {
+class ResidentExpense: NSCoder {
     var month: Month
     var price: Int
     var paid: Bool
@@ -32,5 +32,17 @@ class ResidentExpense {
         self.month = month
         self.price = price
         self.paid = paid
+    }
+    
+    required init?(coder: NSCoder) {
+        month = (coder.decodeObject(forKey: "month") as? Month) ?? .January
+        price = (coder.decodeObject(forKey: "price") as? Int) ?? 0
+        paid = (coder.decodeObject(forKey: "paid") as? Bool) ?? false
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(month.rawValue, forKey: "month")
+        coder.encode(price, forKey: "price")
+        coder.encode(paid, forKey: "paid")
     }
 }

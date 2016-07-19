@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 class House: NSObject, NSCoding {
-    var image: UIImage?
-    var address: String?
+    var image: UIImage
+    var address: String
 //    var accountInfo: Info
-    var residents: [Resident]?
-    var expenses: [Expense]?
+    var residents: [Resident]
+    var expenses: [Expense]
     
-    init(image: UIImage?, address: String?, residents: [Resident]?, expenses: [Expense]?) {
+    init(image: UIImage, address: String, residents: [Resident], expenses: [Expense]) {
         self.image = UIImage()
         self.address = address
         self.residents = residents
@@ -26,6 +26,8 @@ class House: NSObject, NSCoding {
     required init?(coder: NSCoder) {
         if let data = coder.decodeObject(forKey: "image") as? Data {
             image = UIImage(data: data) ?? UIImage(named: "defaultHouse")!
+        } else {
+            image = UIImage(named: "defaultHouse")!
         }
         address = (coder.decodeObject(forKey: "address") as? String) ?? ""
         residents = (coder.decodeObject(forKey: "residents") as? [Resident]) ?? []
@@ -33,7 +35,7 @@ class House: NSObject, NSCoding {
     }
     
     func encode(with coder: NSCoder) {
-        let data = UIImagePNGRepresentation(image!)
+        let data = UIImagePNGRepresentation(image)
         coder.encode(data, forKey: "image")
         coder.encode(address, forKey: "address")
         coder.encode(residents, forKey: "residents")

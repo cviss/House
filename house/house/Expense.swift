@@ -8,12 +8,22 @@
 
 import Foundation
 
-class Expense {
+class Expense: NSCoder {
     var name: String
     var monthly: Bool
     
     init(name: String, monthly: Bool) {
         self.name = name
         self.monthly = monthly
+    }
+    
+    required init?(coder: NSCoder) {
+        name = (coder.decodeObject(forKey: "name") as? String) ?? ""
+        monthly = (coder.decodeObject(forKey: "monthly") as? Bool) ?? false
+    }
+    
+    func encode(with coder: NSCoder) {
+        coder.encode(name, forKey: "name")
+        coder.encode(monthly, forKey: "monthly")
     }
 }
