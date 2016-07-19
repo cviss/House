@@ -12,22 +12,20 @@ class ViewController: UIViewController {
     let manager = FileManager.default()
     
     @IBOutlet weak var textField: UITextField!
-    let house = House(image: UIImage(named: "defaultHouse"), address: "", residents: nil, expenses: nil)
+    var house: House! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
             let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
             let fileURL = try documents.appendingPathComponent("house")
-            
-            if let house = NSKeyedUnarchiver.unarchiveObject(withFile: fileURL.path!) as? House {
-                self.house.image = house.image
-                self.house.address = house.address
-                self.house.residents = house.residents
-                self.house.expenses = house.expenses
+            guard let house = NSKeyedUnarchiver.unarchiveObject(withFile: fileURL.path!) as? House else {
+                print("No House Loaded")
+                return
             }
-
-        } catch {
+            self.house = house
+        }
+        catch {
             print("failed to load")
         }
         
