@@ -9,5 +9,11 @@
 import Foundation
 
 class Expense {
+    var name: String
+    var monthly: Bool
     
+    init(name: String, monthly: Bool) {
+        self.name = name
+        self.monthly = monthly
+    }
 }

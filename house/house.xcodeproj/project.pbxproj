@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				A81D57D31D3E1E2D0064FC4A /* House.swift */,
-				A81D57D91D3E1F690064FC4A /* Resident.swift */,
 				A81D57DB1D3E1F8E0064FC4A /* Expense.swift */,
+				A81D57D91D3E1F690064FC4A /* Resident.swift */,
 				A81D57DD1D3E1F9A0064FC4A /* ResidentExpense.swift */,
 			);
 			name = Models;
