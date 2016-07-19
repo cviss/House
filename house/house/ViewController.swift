@@ -9,17 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let manager = FileManager.default()
+    
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        do {
+            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
+            let fileUrl = try documents.appendingPathComponent("address")
+            textField.text = try String(contentsOf: fileUrl)
+        } catch {
+            print("failed to load")
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func saveAddressPressed(_ sender: AnyObject) {
+        let house = House(image: nil, address: textField.text, residents: nil, expenses: nil)
+        do {
+            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
+            let fileUrl = try documents.appendingPathComponent("address")
+            NSKeyedArchiver.archiveRootObject(house, toFile: fileUrl.path!)
+        } catch {
+            print("failed to save")
+        }
     }
-
 
 }
 
