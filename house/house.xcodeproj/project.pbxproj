@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81D57D41D3E1E2D0064FC4A /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57D31D3E1E2D0064FC4A /* House.swift */; };
 		A844228C1D3C1FA5005FE8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */; };
 		A844228E1D3C1FA5005FE8B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844228D1D3C1FA5005FE8B0 /* ViewController.swift */; };
 		A84422931D3C1FA5005FE8B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A84422921D3C1FA5005FE8B0 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A81D57D31D3E1E2D0064FC4A /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		A84422881D3C1FA5005FE8B0 /* house.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = house.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A844228D1D3C1FA5005FE8B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,36 @@
 			name = "Dont click on this";
 			sourceTree = "<group>";
 		};
+		A81D57D51D3E1E3C0064FC4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A81D57D31D3E1E2D0064FC4A /* House.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A81D57D61D3E1E4D0064FC4A /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		A81D57D71D3E1E700064FC4A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A844228D1D3C1FA5005FE8B0 /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A81D57D81D3E1E810064FC4A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		A844227F1D3C1FA5005FE8B0 = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +135,14 @@
 		A844228A1D3C1FA5005FE8B0 /* house */ = {
 			isa = PBXGroup;
 			children = (
-				A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */,
-				A844228D1D3C1FA5005FE8B0 /* ViewController.swift */,
 				A84422921D3C1FA5005FE8B0 /* Assets.xcassets */,
-				A81D57D21D3E1D070064FC4A /* Dont click on this */,
 				A84422971D3C1FA5005FE8B0 /* Info.plist */,
+				A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */,
+				A81D57D21D3E1D070064FC4A /* Dont click on this */,
+				A81D57D81D3E1E810064FC4A /* Views */,
+				A81D57D71D3E1E700064FC4A /* View Controllers */,
+				A81D57D61D3E1E4D0064FC4A /* Model Controllers */,
+				A81D57D51D3E1E3C0064FC4A /* Models */,
 			);
 			path = house;
 			sourceTree = "<group>";
@@ -264,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A844228E1D3C1FA5005FE8B0 /* ViewController.swift in Sources */,
+				A81D57D41D3E1E2D0064FC4A /* House.swift in Sources */,
 				A844228C1D3C1FA5005FE8B0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
