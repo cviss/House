@@ -10,9 +10,10 @@ import Foundation
 
 class Resident {
     var name: String
+    var expenses: [String : ResidentExpense]
     
-    
-    init(name: String) {
+    init(name: String, expenses: [String : ResidentExpense]) {
         self.name = name
+        self.expenses = expenses
     }
 }

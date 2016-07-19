@@ -24,5 +24,13 @@ enum Month: String {
 }
 
 class ResidentExpense {
+    var month: Month
+    var price: Int
+    var paid: Bool
     
+    init(month: Month, price: Int, paid: Bool) {
+        self.month = month
+        self.price = price
+        self.paid = paid
+    }
 }
