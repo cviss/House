@@ -23,7 +23,7 @@ enum Month: String {
     case December = "December"
 }
 
-class ResidentExpense: NSCoder {
+class ResidentExpense: NSCoding {
     var month: Month
     var price: Int
     var paid: Bool

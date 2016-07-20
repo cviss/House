@@ -8,7 +8,9 @@
 
 import Foundation
 
-class Expense: NSCoder {
+class Expense: NSCoding {
+    
+    //Initialize.
     var name: String
     var monthly: Bool
     
@@ -17,6 +19,7 @@ class Expense: NSCoder {
         self.monthly = monthly
     }
     
+    //Set up coding.
     required init?(coder: NSCoder) {
         name = (coder.decodeObject(forKey: "name") as? String) ?? ""
         monthly = (coder.decodeObject(forKey: "monthly") as? Bool) ?? false

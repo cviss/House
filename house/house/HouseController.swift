@@ -17,6 +17,8 @@ class HouseController {
     var house: House! = nil
     
     init() {
+        
+        //Create fileUrl for HouseController
         do {
             let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
             self.fileUrl = try documents.appendingPathComponent("house")
@@ -25,18 +27,28 @@ class HouseController {
             print("failed to make file URL for house or Document Jansen")
             self.fileUrl = nil
         }
+        
+        
     }
     
-    func restoreHouse() {
-            guard let house = NSKeyedUnarchiver.unarchiveObject(withFile: self.fileUrl.path!) as? House else {
-                print("No House Loaded")
-                return
-            }
-            self.house = house
+    //Restore House object from memory. Returns true if successful.
+    func restoreHouse() -> Bool {
+        guard let house = NSKeyedUnarchiver.unarchiveObject(withFile: self.fileUrl.path!) as? House else {
+            print("No House Loaded")
+            return false
+        }
+        self.house = house
+        return true
     }
     
-    func saveHouse() {
-            NSKeyedArchiver.archiveRootObject(house, toFile: self.fileUrl.path!)
+    //Saves House object to memory. Returns true and saves if house is not nil.
+    func saveHouse() -> Bool {
+        guard house != nil else {
+            return false
+        }
+        NSKeyedArchiver.archiveRootObject(house!, toFile: self.fileUrl.path!)
+        return true
     }
+    
     
 }

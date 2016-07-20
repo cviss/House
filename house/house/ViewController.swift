@@ -9,31 +9,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-    let manager = FileManager.default()
-    
-
     
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var residentField: UITextField!
     
-    
-    var house: House! = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         HouseController.sharedInstance.restoreHouse()
-        addressField.text = HouseController.sharedInstance.house.address
+        addressField.text = HouseController.sharedInstance.house?.address
     }
 
     @IBAction func saveAddressPressed(_ sender: AnyObject) {
-        HouseController.sharedInstance.house.address = addressField.text!
+        HouseController.sharedInstance.house?.address = addressField.text!
         HouseController.sharedInstance.saveHouse()
     }
     
     var l = 0
     @IBAction func saveResidentPressed(_ sender: AnyObject) {
         HouseController.sharedInstance.house.residents.append(Resident(name: residentField.text!, expenses: [:]))
-        HouseController.sharedInstance.saveHouse()
+        do {
+            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
+            let fileUrl = try documents.appendingPathComponent("residents")
+            NSKeyedArchiver.archiveRootObject(HouseController.sharedInstance.house.residents[0], toFile: fileUrl.path!)
+        }
+        catch {
+            print("fail")
+        }
+        
+//        HouseController.sharedInstance.saveHouse()
         l += 1
     }
 

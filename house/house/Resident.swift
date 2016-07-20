@@ -8,7 +8,9 @@
 
 import Foundation
 
-class Resident: NSCoder {
+class Resident: NSCoding {
+    
+    //Initialize.
     var name: String
     var expenses: [String : ResidentExpense]
     
@@ -17,6 +19,7 @@ class Resident: NSCoder {
         self.expenses = expenses
     }
     
+    //Set up coding.
     required init?(coder: NSCoder) {
         name = (coder.decodeObject(forKey: "name") as? String) ?? ""
         expenses = (coder.decodeObject(forKey: "expenses") as? [String : ResidentExpense]) ?? [:]
@@ -26,4 +29,6 @@ class Resident: NSCoder {
         coder.encode(name, forKey: "name")
         coder.encode(expenses, forKey: "expenses")
     }
+    
+    
 }

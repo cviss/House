@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
-class House: NSObject, NSCoding {
+class House: NSCoding {
+    
+    //Initialize.
     var image: UIImage
     var address: String
-//    var accountInfo: Info
+//  var accountInfo: Info
     var residents: [Resident]
     var expenses: [Expense]
     
@@ -23,12 +25,16 @@ class House: NSObject, NSCoding {
         self.expenses = expenses
     }
     
+    //Set up coding.
     required init?(coder: NSCoder) {
+        
+        //Image Coder
         if let data = coder.decodeObject(forKey: "image") as? Data {
             image = UIImage(data: data) ?? UIImage(named: "defaultHouse")!
         } else {
             image = UIImage(named: "defaultHouse")!
         }
+        
         address = (coder.decodeObject(forKey: "address") as? String) ?? ""
         residents = (coder.decodeObject(forKey: "residents") as? [Resident]) ?? []
         expenses = (coder.decodeObject(forKey: "expenses") as? [Expense]) ?? []
