@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< Updated upstream
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CB7-z2-Bqf">
+>>>>>>> Stashed changes
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Residents-->
@@ -49,10 +54,15 @@
                         <viewControllerLayoutGuide type="top" id="qim-Lf-zlz"/>
                         <viewControllerLayoutGuide type="bottom" id="eg3-hC-2gj"/>
                     </layoutGuides>
+<<<<<<< Updated upstream
                     <view key="view" contentMode="scaleToFill" id="h7E-fC-fR1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+=======
+                    <view key="view" contentMode="scaleToFill" id="Jfe-YT-9gJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+>>>>>>> Stashed changes
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oOB-lE-YYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,10 +77,15 @@
                         <viewControllerLayoutGuide type="top" id="AQF-8g-PJ1"/>
                         <viewControllerLayoutGuide type="bottom" id="7Kx-kz-SWC"/>
                     </layoutGuides>
+<<<<<<< Updated upstream
                     <view key="view" contentMode="scaleToFill" id="VMG-sX-bWh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+=======
+                    <view key="view" contentMode="scaleToFill" id="sjz-iP-m2t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+>>>>>>> Stashed changes
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="D0M-be-JU5"/>
                 </viewController>
