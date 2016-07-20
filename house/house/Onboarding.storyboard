@@ -10,7 +10,7 @@
         <scene sceneID="BEq-Vo-7BA">
             <objects>
                 <navigationController id="N5g-Fh-N0y" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="6ZH-dg-oRk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6ZH-dg-oRk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUG-lH-Sh5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-447" y="238"/>
+            <point key="canvasLocation" x="-450" y="229"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="LUc-Nd-N5R">
