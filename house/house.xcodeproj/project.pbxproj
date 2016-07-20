@@ -14,6 +14,9 @@
 		A81D57E01D3E3D310064FC4A /* HouseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57DF1D3E3D310064FC4A /* HouseController.swift */; };
 		A81D57E21D3E3D3E0064FC4A /* ExpenseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57E11D3E3D3E0064FC4A /* ExpenseController.swift */; };
 		A81D57E41D3E3D4A0064FC4A /* ResidentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57E31D3E3D4A0064FC4A /* ResidentController.swift */; };
+		A81D57E81D3FA9B60064FC4A /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57E71D3FA9B60064FC4A /* HouseViewController.swift */; };
+		A81D57EA1D3FA9F50064FC4A /* ResidentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57E91D3FA9F50064FC4A /* ResidentViewController.swift */; };
+		A81D57EC1D3FAA0C0064FC4A /* RentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81D57EB1D3FAA0C0064FC4A /* RentViewController.swift */; };
 		A844228C1D3C1FA5005FE8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */; };
 		A84422931D3C1FA5005FE8B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A84422921D3C1FA5005FE8B0 /* Assets.xcassets */; };
 		A84422961D3C1FA5005FE8B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A84422941D3C1FA5005FE8B0 /* LaunchScreen.storyboard */; };
@@ -48,6 +51,9 @@
 		A81D57DF1D3E3D310064FC4A /* HouseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseController.swift; sourceTree = "<group>"; };
 		A81D57E11D3E3D3E0064FC4A /* ExpenseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseController.swift; sourceTree = "<group>"; };
 		A81D57E31D3E3D4A0064FC4A /* ResidentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentController.swift; sourceTree = "<group>"; };
+		A81D57E71D3FA9B60064FC4A /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
+		A81D57E91D3FA9F50064FC4A /* ResidentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResidentViewController.swift; sourceTree = "<group>"; };
+		A81D57EB1D3FAA0C0064FC4A /* RentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RentViewController.swift; sourceTree = "<group>"; };
 		A84422881D3C1FA5005FE8B0 /* house.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = house.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A844228B1D3C1FA5005FE8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A84422921D3C1FA5005FE8B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 		A81D57D71D3E1E700064FC4A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A81D57E71D3FA9B60064FC4A /* HouseViewController.swift */,
+				A81D57E91D3FA9F50064FC4A /* ResidentViewController.swift */,
+				A81D57EB1D3FAA0C0064FC4A /* RentViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -322,10 +331,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A81D57DE1D3E1F9A0064FC4A /* ResidentExpense.swift in Sources */,
+				A81D57E81D3FA9B60064FC4A /* HouseViewController.swift in Sources */,
 				A81D57D41D3E1E2D0064FC4A /* House.swift in Sources */,
 				A844228C1D3C1FA5005FE8B0 /* AppDelegate.swift in Sources */,
 				A81D57DA1D3E1F690064FC4A /* Resident.swift in Sources */,
+				A81D57EC1D3FAA0C0064FC4A /* RentViewController.swift in Sources */,
 				A81D57DC1D3E1F8E0064FC4A /* Expense.swift in Sources */,
+				A81D57EA1D3FA9F50064FC4A /* ResidentViewController.swift in Sources */,
 				A81D57E21D3E3D3E0064FC4A /* ExpenseController.swift in Sources */,
 				A81D57E01D3E3D310064FC4A /* HouseController.swift in Sources */,
 				A81D57E41D3E3D4A0064FC4A /* ResidentController.swift in Sources */,
