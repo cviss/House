@@ -27,16 +27,7 @@ class ViewController: UIViewController {
     var l = 0
     @IBAction func saveResidentPressed(_ sender: AnyObject) {
         HouseController.sharedInstance.house.residents.append(Resident(name: residentField.text!, expenses: [:]))
-        do {
-            let documents = manager.urlsForDirectory(.documentDirectory, inDomains: .userDomainMask)[0]
-            let fileUrl = try documents.appendingPathComponent("residents")
-            NSKeyedArchiver.archiveRootObject(HouseController.sharedInstance.house.residents[0], toFile: fileUrl.path!)
-        }
-        catch {
-            print("fail")
-        }
-        
-//        HouseController.sharedInstance.saveHouse()
+        HouseController.sharedInstance.saveHouse()
         l += 1
     }
 
